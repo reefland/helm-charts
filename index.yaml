@@ -1,0 +1,33 @@
+apiVersion: v1
+entries:
+  mosquitto:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 2.0.14
+    created: "2022-08-22T17:23:03.070721281Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Eclipse Mosquitto - An open source MQTT broker
+    digest: 8e6f9762eff1d16a0c0ceef66736388556c135b9ebe490c3f3c58da4d1ae866f
+    home: https://github.com/reefland/helm-charts/tree/main/charts/apps/mosquitto
+    icon: https://raw.githubusercontent.com/eclipse/mosquitto/master/logo/mosquitto-logo-min.svg
+    keywords:
+    - mosquitto
+    - MQTT
+    - eclipse-iot
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: me@bjw-s.dev
+      name: bjw-s
+    name: mosquitto
+    sources:
+    - https://github.com/eclipse/mosquitto
+    urls:
+    - https://github.com/reefland/helm-charts/releases/download/mosquitto-4.8.2/mosquitto-4.8.2.tgz
+    version: 4.8.2
+generated: "2022-08-22T17:23:03.070726681Z"
