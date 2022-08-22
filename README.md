@@ -14,7 +14,11 @@ The Helm repository can be installed as follows:
 helm repo add reefland https://reefland.github.io/helm-charts
 ```
 
-You can then run `helm search repo reefland` to search the charts.
+You can then search the application charts:
+
+```console
+helm search repo reefland
+```
 
 ## Documentation
 
