@@ -49,3 +49,4 @@ persistence:
   configinc:
     enabled: false
     mountPath: /mosquitto/configinc
+
