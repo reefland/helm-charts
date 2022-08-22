@@ -1,27 +1,28 @@
 # helm-charts
-A collection of Helm charts
+
+A collection of Helm charts.
 
 ## Goal
 
-This repo contains Helm charts that I have developed to run applications in my
-[home Kubernetes cluster](https://github.com/bjw-s/home-ops/).
-
-This repo is not intended to be a replacement for any of the large collections
-of Helm charts that are out there.
+This repo contains Helm charts based on previous work from [k8s@home project](https://github.com/k8s-at-home/charts) for [applications](https://github.com/reefland/helm-charts/tree/main/charts/apps) I've deploy to my [Home Kubernetes](https://github.com/reefland/ansible-k3s-argocd-renovate) Cluster.
 
 ## Installation
 
 The Helm repository can be installed as follows:
 
 ```console
-helm repo add bjw-s https://bjw-s.github.io/helm-charts
+helm repo add reefland https://reefland.github.io/helm-charts
 ```
 
-You can then run `helm search repo bjw-s` to search the charts.
+You can then search the application charts:
+
+```console
+helm search repo reefland
+```
 
 ## Documentation
 
-Documentation can be found [here](https://bjw-s.github.io/helm-charts/docs/).
+Documentation can be found [here](https://github.com/reefland/helm-charts/tree/main/charts/apps).
 
 ## Contributing
 
@@ -30,3 +31,4 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md)
 ## License
 
 [Apache 2.0 License](./LICENSE)
+
