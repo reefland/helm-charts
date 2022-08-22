@@ -4,7 +4,7 @@ A collection of Helm charts.
 
 ## Goal
 
-This repo contains Helm charts based on previous work from [k8s@home project](https://github.com/k8s-at-home/charts) for [applications](https://github.com/reefland/helm-charts/tree/main/charts/apps) I've deploy to my [Home Kubernetes](https://github.com/reefland/ansible-k3s-argocd-renovate) Cluster.
+This repo contains Helm charts based on previous work from [k8s@home project](https://github.com/k8s-at-home/charts) for [applications](https://github.com/reefland/helm-charts/tree/main/charts) I've deploy to my [Home Kubernetes](https://github.com/reefland/ansible-k3s-argocd-renovate) Cluster.
 
 ## Installation
 
