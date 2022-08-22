@@ -22,7 +22,7 @@ helm search repo reefland
 
 ## Documentation
 
-Documentation can be found [here](https://github.com/reefland/helm-charts/tree/main/charts/apps).
+Documentation can be found [here](https://github.com/reefland/helm-charts/tree/main/docs).
 
 ## Contributing
 
