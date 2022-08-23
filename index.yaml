@@ -30,4 +30,37 @@ entries:
     urls:
     - https://github.com/reefland/helm-charts/releases/download/mosquitto-4.8.2/mosquitto-4.8.2.tgz
     version: 4.8.2
-generated: "2022-08-22T17:23:03.070726681Z"
+  zigbee2mqtt:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 1.19.1
+    created: "2022-08-23T18:59:57.495499724Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Bridges events and allows you to control your Zigbee devices via
+      MQTT
+    digest: 7d6ae28a28dc8d05c1ea42370e70e2fb6dc0498c1611d47bf1fd1cc5dbeb8b0b
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/zigbee2mqtt
+    icon: https://www.zigbee2mqtt.io/images/logo.png
+    keywords:
+    - zigbee
+    - mqtt
+    - home-assistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: miguelangel.santiago@hotmail.com
+      name: masantiago
+    - email: me@bjw-s.dev
+      name: bjw-s
+    name: zigbee2mqtt
+    sources:
+    - https://github.com/Koenkk/zigbee2mqtt
+    urls:
+    - https://github.com/reefland/helm-charts/releases/download/zigbee2mqtt-9.4.2/zigbee2mqtt-9.4.2.tgz
+    version: 9.4.2
+generated: "2022-08-23T18:59:57.495527223Z"
