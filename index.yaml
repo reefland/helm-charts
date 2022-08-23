@@ -1,5 +1,49 @@
 apiVersion: v1
 entries:
+  home-assistant:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 2022.5.4
+    created: "2022-08-23T22:46:42.107636178Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.6.12
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.0.14
+    - condition: influxdb.enabled
+      name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.3.5
+    description: Home Assistant
+    digest: fd2c28bef8c6b0fa7285cf0e2872b7be418c2180877f829f0730a437360fdf0c
+    home: https://github.com/reefland/helm-charts/tree/main/charts/home-assistant
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - home-assistant
+    - hass
+    - homeassistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/home-assistant
+    - https://github.com/cdr/code-server
+    - https://github.com/reefland/helm-charts/tree/main/charts/home-assistant
+    urls:
+    - https://github.com/reefland/helm-charts/releases/download/home-assistant-13.4.2/home-assistant-13.4.2.tgz
+    version: 13.4.2
   mosquitto:
   - annotations:
       artifacthub.io/changes: |-
@@ -158,4 +202,4 @@ entries:
     urls:
     - https://github.com/reefland/helm-charts/releases/download/zigbee2mqtt-9.4.2/zigbee2mqtt-9.4.2.tgz
     version: 9.4.2
-generated: "2022-08-23T20:48:47.498570097Z"
+generated: "2022-08-23T22:46:42.107656979Z"
