@@ -1,6 +1,6 @@
 # zigbee2mqtt
 
-![Version: 9.4.2](https://img.shields.io/badge/Version-9.4.2-informational?style=flat-square) ![AppVersion: 1.27.0](https://img.shields.io/badge/AppVersion-1.27.0-informational?style=flat-square)
+![Version: 9.4.3](https://img.shields.io/badge/Version-9.4.3-informational?style=flat-square) ![AppVersion: 1.27.0](https://img.shields.io/badge/AppVersion-1.27.0-informational?style=flat-square)
 
 Bridges events and allows you to control your Zigbee devices via MQTT
 
@@ -21,9 +21,9 @@ Kubernetes: `>=1.16.0-0`
 ## TL;DR
 
 ```console
-helm repo add k8s-at-home https://k8s-at-home.com/charts/
+helm repo add reefland https://reefland.github.io/helm-charts
 helm repo update
-helm install zigbee2mqtt k8s-at-home/zigbee2mqtt
+helm install zigbee2mqtt reefland/zigbee2mqtt
 ```
 
 ## Installing the Chart
@@ -31,7 +31,7 @@ helm install zigbee2mqtt k8s-at-home/zigbee2mqtt
 To install the chart with the release name `zigbee2mqtt`
 
 ```console
-helm install zigbee2mqtt k8s-at-home/zigbee2mqtt
+helm install zigbee2mqtt reefland/zigbee2mqtt
 ```
 
 ## Uninstalling the Chart
@@ -47,20 +47,20 @@ The command removes all the Kubernetes components associated with the chart **in
 ## Configuration
 
 Read through the [values.yaml](./values.yaml) file. It has several commented out suggested values.
-Other values may be used from the [values.yaml](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common/values.yaml) from the [common library](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common).
+Other values may be used from the [values.yaml](https://github.com/reefland/helm-charts/blob/main/charts/library/common/values.yaml) from the [common library](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common).
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 ```console
 helm install zigbee2mqtt \
   --set env.TZ="America/New York" \
-    k8s-at-home/zigbee2mqtt
+    reefland/zigbee2mqtt
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install zigbee2mqtt k8s-at-home/zigbee2mqtt -f values.yaml
+helm install zigbee2mqtt reefland/zigbee2mqtt -f values.yaml
 ```
 
 ## Custom configuration
@@ -105,7 +105,7 @@ securityContext:
 
 ## Values
 
-**Important**: When deploying an application Helm chart you can add more values from our common library chart [here](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common)
+**Important**: When deploying an application Helm chart you can add more values from our common library chart [here](https://github.com/reefland/helm-charts/tree/main/charts/library/common)
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
@@ -128,7 +128,7 @@ securityContext:
 
 ## Changelog
 
-### Version 9.4.2
+### Version 9.4.3
 
 #### Added
 
