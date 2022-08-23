@@ -7,6 +7,35 @@ entries:
           description: Upgraded `common` chart dependency to version 4.5.2
     apiVersion: v2
     appVersion: 2.0.14
+    created: "2022-08-23T20:35:43.604852437Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Eclipse Mosquitto - An open source MQTT broker
+    digest: 8d0bd066789b7f96da552d3751b5ce12b5da910686cc370e386ff3a4a739f92b
+    home: https://github.com/reefland/helm-charts/tree/main/charts/apps/mosquitto
+    icon: https://raw.githubusercontent.com/eclipse/mosquitto/master/logo/mosquitto-logo-min.svg
+    keywords:
+    - mosquitto
+    - MQTT
+    - eclipse-iot
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: me@bjw-s.dev
+      name: bjw-s
+    name: mosquitto
+    sources:
+    - https://github.com/eclipse/mosquitto
+    urls:
+    - https://github.com/reefland/helm-charts/releases/download/mosquitto-4.8.3/mosquitto-4.8.3.tgz
+    version: 4.8.3
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 2.0.14
     created: "2022-08-22T17:23:03.070721281Z"
     dependencies:
     - name: common
@@ -95,4 +124,4 @@ entries:
     urls:
     - https://github.com/reefland/helm-charts/releases/download/zigbee2mqtt-9.4.2/zigbee2mqtt-9.4.2.tgz
     version: 9.4.2
-generated: "2022-08-23T20:20:37.583426712Z"
+generated: "2022-08-23T20:35:43.604875037Z"
