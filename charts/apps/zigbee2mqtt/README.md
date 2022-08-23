@@ -4,8 +4,6 @@
 
 Bridges events and allows you to control your Zigbee devices via MQTT
 
-**This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/k8s-at-home/charts/issues/new/choose)**
-
 ## Source Code
 
 * <https://github.com/Koenkk/zigbee2mqtt>
@@ -100,7 +98,7 @@ affinity:
 
 If you are getting errors, that the device cannot be opened when starting Zigbee2Mqtt, try uncommenting the privileged flag:
 
-```
+```yaml
 securityContext:
   privileged: true
 ```
