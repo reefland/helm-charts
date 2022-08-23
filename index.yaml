@@ -37,6 +37,38 @@ entries:
           description: Upgraded `common` chart dependency to version 4.5.2
     apiVersion: v2
     appVersion: 1.19.1
+    created: "2022-08-23T20:20:37.583413312Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Bridges events and allows you to control your Zigbee devices via
+      MQTT
+    digest: 0ab308498ebd35ac3fb47d7b31e540124e96420e7baa1e666f29b3f046466e7d
+    home: https://github.com/reefland/helm-charts/tree/main/charts/apps/zigbee2mqtt
+    icon: https://www.zigbee2mqtt.io/images/logo.png
+    keywords:
+    - zigbee
+    - mqtt
+    - home-assistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: miguelangel.santiago@hotmail.com
+      name: masantiago
+    - email: me@bjw-s.dev
+      name: bjw-s
+    name: zigbee2mqtt
+    sources:
+    - https://github.com/Koenkk/zigbee2mqtt
+    urls:
+    - https://github.com/reefland/helm-charts/releases/download/zigbee2mqtt-9.4.3/zigbee2mqtt-9.4.3.tgz
+    version: 9.4.3
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 1.19.1
     created: "2022-08-23T18:59:57.495499724Z"
     dependencies:
     - name: common
@@ -63,4 +95,4 @@ entries:
     urls:
     - https://github.com/reefland/helm-charts/releases/download/zigbee2mqtt-9.4.2/zigbee2mqtt-9.4.2.tgz
     version: 9.4.2
-generated: "2022-08-23T18:59:57.495527223Z"
+generated: "2022-08-23T20:20:37.583426712Z"
