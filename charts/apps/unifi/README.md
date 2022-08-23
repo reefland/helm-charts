@@ -1,6 +1,6 @@
 # unifi
 
-![Version: 5.1.2](https://img.shields.io/badge/Version-5.1.2-informational?style=flat-square) ![AppVersion: v7.1.68](https://img.shields.io/badge/AppVersion-v7.1.68-informational?style=flat-square)
+![Version: 5.1.3](https://img.shields.io/badge/Version-5.1.3-informational?style=flat-square) ![AppVersion: v7.1.68](https://img.shields.io/badge/AppVersion-v7.1.68-informational?style=flat-square)
 
 Ubiquiti Network's Unifi Controller
 
@@ -20,9 +20,9 @@ Ubiquiti Network's Unifi Controller
 ## TL;DR
 
 ```console
-helm repo add k8s-at-home https://k8s-at-home.com/charts/
+helm repo add reefland https://reefland.github.io/helm-charts/
 helm repo update
-helm install unifi k8s-at-home/unifi
+helm install unifi reefland/unifi
 ```
 
 ## Installing the Chart
@@ -30,7 +30,7 @@ helm install unifi k8s-at-home/unifi
 To install the chart with the release name `unifi`
 
 ```console
-helm install unifi k8s-at-home/unifi
+helm install unifi reefland/unifi
 ```
 
 ## Uninstalling the Chart
@@ -46,20 +46,20 @@ The command removes all the Kubernetes components associated with the chart **in
 ## Configuration
 
 Read through the [values.yaml](./values.yaml) file. It has several commented out suggested values.
-Other values may be used from the [values.yaml](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common/values.yaml) from the [common library](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common).
+Other values may be used from the [values.yaml](https://github.com/reefland/helm-charts/blob/main/charts/library/common/values.yaml) from the [common library](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common).
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 ```console
 helm install unifi \
   --set env.TZ="America/New York" \
-    k8s-at-home/unifi
+    reefland/unifi
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install unifi k8s-at-home/unifi -f values.yaml
+helm install unifi reefland/unifi -f values.yaml
 ```
 
 ## Custom configuration
@@ -144,7 +144,7 @@ By default it is not possible to combine TCP and UDP ports on a service with `ty
 
 ## Changelog
 
-### Version 5.1.2
+### Version 5.1.3
 
 #### Added
 
