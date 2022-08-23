@@ -23,9 +23,9 @@ Kubernetes: `>=1.16.0-0`
 ## TL;DR
 
 ```console
-helm repo add k8s-at-home https://k8s-at-home.com/charts/
+helm repo add reefland https://reefland.github.io/helm-charts/
 helm repo update
-helm install mosquitto k8s-at-home/mosquitto
+helm install mosquitto reefland/mosquitto
 ```
 
 ## Installing the Chart
@@ -33,7 +33,7 @@ helm install mosquitto k8s-at-home/mosquitto
 To install the chart with the release name `mosquitto`
 
 ```console
-helm install mosquitto k8s-at-home/mosquitto
+helm install mosquitto reefland/mosquitto
 ```
 
 ## Uninstalling the Chart
@@ -49,20 +49,20 @@ The command removes all the Kubernetes components associated with the chart **in
 ## Configuration
 
 Read through the [values.yaml](./values.yaml) file. It has several commented out suggested values.
-Other values may be used from the [values.yaml](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common/values.yaml) from the [common library](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common).
+Other values may be used from the [values.yaml](https://github.com/reefland/helm-charts/blob/main/charts/library/common/values.yaml) from the [common library](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common).
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 ```console
 helm install mosquitto \
   --set env.TZ="America/New York" \
-    k8s-at-home/mosquitto
+    reefland/mosquitto
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install mosquitto k8s-at-home/mosquitto -f values.yaml
+helm install mosquitto reefland/mosquitto -f values.yaml
 ```
 
 ## Custom configuration
@@ -71,7 +71,7 @@ N/A
 
 ## Values
 
-**Important**: When deploying an application Helm chart you can add more values from our common library chart [here](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common)
+**Important**: When deploying an application Helm chart you can add more values from our common library chart [here](https://github.com/reefland/helm-charts/tree/main/charts/library/common)
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
