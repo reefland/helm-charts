@@ -1,6 +1,6 @@
 # Pod Restart Info Collector
 
-![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![AppVersion: 1.00.0](https://img.shields.io/badge/AppVersion-1.0.0-informational?style=flat-square)
+![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat-square) ![AppVersion: 1.00.0](https://img.shields.io/badge/AppVersion-1.0.0-informational?style=flat-square)
 
 k8s-pod-restart-info-collector is a simple K8s customer controller that watches for Pods changes and collects K8s Pod restart reasons, logs, and events to Slack channel when a Pod restarts.
 
@@ -80,7 +80,7 @@ Example Slack Notification Image from GitHub Project Page:
 
 ## Changelog
 
-### Version 0.1.0
+### Version 0.1.1
 
 #### Added
 
@@ -92,4 +92,4 @@ N/A
 
 #### Fixed
 
-N/A
+* Documentation references only
