@@ -47,6 +47,16 @@ entries:
   k8s-pod-restart-info-collector:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2022-09-10T20:56:04.245658143Z"
+    description: A Helm chart for Kubernetes
+    digest: 47f4346cf9f258808ab48b81bcf0c364e7c98692f1ee041a95d7d26bfb825d47
+    name: k8s-pod-restart-info-collector
+    type: application
+    urls:
+    - https://github.com/reefland/helm-charts/releases/download/k8s-pod-restart-info-collector-0.1.1/k8s-pod-restart-info-collector-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2022-09-10T20:23:42.340156757Z"
     description: A Helm chart for Kubernetes
     digest: ea7905261c4c98af0d443c392f603da193080b19ffd437083c76a44037821ffa
@@ -213,4 +223,4 @@ entries:
     urls:
     - https://github.com/reefland/helm-charts/releases/download/zigbee2mqtt-9.4.2/zigbee2mqtt-9.4.2.tgz
     version: 9.4.2
-generated: "2022-09-10T20:23:42.340168758Z"
+generated: "2022-09-10T20:56:04.245668943Z"
