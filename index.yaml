@@ -44,6 +44,17 @@ entries:
     urls:
     - https://github.com/reefland/helm-charts/releases/download/home-assistant-13.4.2/home-assistant-13.4.2.tgz
     version: 13.4.2
+  k8s-pod-restart-info-collector:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-09-10T20:23:42.340156757Z"
+    description: A Helm chart for Kubernetes
+    digest: ea7905261c4c98af0d443c392f603da193080b19ffd437083c76a44037821ffa
+    name: k8s-pod-restart-info-collector
+    type: application
+    urls:
+    - https://github.com/reefland/helm-charts/releases/download/k8s-pod-restart-info-collector-0.1.0/k8s-pod-restart-info-collector-0.1.0.tgz
+    version: 0.1.0
   mosquitto:
   - annotations:
       artifacthub.io/changes: |-
@@ -202,4 +213,4 @@ entries:
     urls:
     - https://github.com/reefland/helm-charts/releases/download/zigbee2mqtt-9.4.2/zigbee2mqtt-9.4.2.tgz
     version: 9.4.2
-generated: "2022-08-23T22:46:42.107656979Z"
+generated: "2022-09-10T20:23:42.340168758Z"
