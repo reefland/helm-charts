@@ -23,7 +23,7 @@ N/A
 ```console
 helm repo add reefland https://reefland.github.io/helm-charts
 helm repo update
-helm install pod-restart-info-collector reefland/pod-restart-info-collector
+helm install pod-restart-info-collector reefland/k8s-pod-restart-info-collector
 ```
 
 ## Installing the Chart
@@ -31,7 +31,7 @@ helm install pod-restart-info-collector reefland/pod-restart-info-collector
 To install the chart with the release name `pod-restart-info-collector`
 
 ```console
-helm install pod-restart-info-collector reefland/pod-restart-info-collector
+helm install pod-restart-info-collector reefland/k8s-pod-restart-info-collector
 ```
 
 ## Uninstalling the Chart
@@ -55,13 +55,13 @@ helm install pod-restart-info-collector \
   --set slackWebhookUrl="https://hooks.slack.com/services/Change-Me" \
   --set clusterName="Change-Me" 
   --set slackChannel="Change-Me" \
-  reefland/pod-restart-info-collector
+  reefland/k8s-pod-restart-info-collector
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install pod-restart-info-collector reefland/pod-restart-info-collector -f values.yaml
+helm install pod-restart-info-collector reefland/k8s-pod-restart-info-collector -f values.yaml
 ```
 
 Example Slack Notification Image from GitHub Project Page:
