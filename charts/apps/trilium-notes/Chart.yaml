@@ -1,0 +1,26 @@
+---
+apiVersion: v2
+appVersion: 0.55.1
+description: Trilium Notes
+name: trilium-notes
+version: 0.0.1
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - trilium
+  - trilium-notes
+home: https://github.com/reefland/helm-charts/tree/main/charts/trilium-notes
+icon: https://user-images.githubusercontent.com/70204468/124865095-a21cbb80-dfec-11eb-8d55-7aaaf579c91b.png
+sources:
+  - https://github.com/zadam/trilium
+  - https://github.com/reefland/helm-charts/tree/main/charts/trilium-notes
+maintainers:
+  - name: reefland
+    email: reefland@gmail.com
+dependencies:
+  - name: common
+    repository: https://library-charts.k8s-at-home.com
+    version: 4.5.2
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Initial Chart Release
