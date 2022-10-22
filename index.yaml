@@ -124,6 +124,36 @@ entries:
     urls:
     - https://github.com/reefland/helm-charts/releases/download/mosquitto-4.8.2/mosquitto-4.8.2.tgz
     version: 4.8.2
+  trilium-notes:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Initial Chart Release
+    apiVersion: v2
+    appVersion: 0.55.1
+    created: "2022-10-22T19:54:29.711247191Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Trilium Notes
+    digest: 5c925cf30f7943818c77ddd46c8a3aee4b9a88be60fde1a1446dbb0e3f1e1d87
+    home: https://github.com/reefland/helm-charts/tree/main/charts/trilium-notes
+    icon: https://user-images.githubusercontent.com/70204468/124865095-a21cbb80-dfec-11eb-8d55-7aaaf579c91b.png
+    keywords:
+    - trilium
+    - trilium-notes
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: reefland@gmail.com
+      name: reefland
+    name: trilium-notes
+    sources:
+    - https://github.com/zadam/trilium
+    - https://github.com/reefland/helm-charts/tree/main/charts/trilium-notes
+    urls:
+    - https://github.com/reefland/helm-charts/releases/download/trilium-notes-0.0.1/trilium-notes-0.0.1.tgz
+    version: 0.0.1
   unifi:
   - annotations:
       artifacthub.io/changes: |-
@@ -223,4 +253,4 @@ entries:
     urls:
     - https://github.com/reefland/helm-charts/releases/download/zigbee2mqtt-9.4.2/zigbee2mqtt-9.4.2.tgz
     version: 9.4.2
-generated: "2022-09-10T20:56:04.245668943Z"
+generated: "2022-10-22T19:54:29.711269591Z"
