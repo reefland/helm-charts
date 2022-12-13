@@ -1,0 +1,26 @@
+---
+apiVersion: v2
+appVersion: 3.7.4-20220421
+description: Apt-Cacher NG is a caching proxy, specialized for package files from Linux distributors.
+name: apt-cacher-ng
+version: 0.0.1
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - apt-cacher-ng
+home: https://github.com/reefland/helm-charts/tree/main/charts/apt-cacher-ng
+icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+sources:
+  - https://www.unix-ag.uni-kl.de/~bloch/acng/
+  - https://github.com/sameersbn/docker-apt-cacher-ng
+  - https://github.com/reefland/helm-charts/tree/main/charts/apt-cacher-ng
+maintainers:
+  - name: reefland
+    email: reefland@gmail.com
+dependencies:
+  - name: common
+    repository: https://library-charts.k8s-at-home.com
+    version: 4.5.2
+notations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Initial Chart Release
