@@ -1,5 +1,32 @@
 apiVersion: v1
 entries:
+  apt-cacher-ng:
+  - apiVersion: v2
+    appVersion: 3.7.4-20220421
+    created: "2022-12-13T22:05:01.623392574Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Apt-Cacher NG is a caching proxy, specialized for package files from
+      Linux distributors.
+    digest: 4e96beac95880d64df061e2bc457b4dff14b5222eca3e2ba57058ba744ffb42e
+    home: https://github.com/reefland/helm-charts/tree/main/charts/apt-cacher-ng
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - apt-cacher-ng
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: reefland@gmail.com
+      name: reefland
+    name: apt-cacher-ng
+    sources:
+    - https://www.unix-ag.uni-kl.de/~bloch/acng/
+    - https://github.com/sameersbn/docker-apt-cacher-ng
+    - https://github.com/reefland/helm-charts/tree/main/charts/apt-cacher-ng
+    urls:
+    - https://github.com/reefland/helm-charts/releases/download/apt-cacher-ng-0.0.1/apt-cacher-ng-0.0.1.tgz
+    version: 0.0.1
   home-assistant:
   - annotations:
       artifacthub.io/changes: |-
@@ -253,4 +280,4 @@ entries:
     urls:
     - https://github.com/reefland/helm-charts/releases/download/zigbee2mqtt-9.4.2/zigbee2mqtt-9.4.2.tgz
     version: 9.4.2
-generated: "2022-10-22T19:54:29.711269591Z"
+generated: "2022-12-13T22:05:01.623411474Z"
