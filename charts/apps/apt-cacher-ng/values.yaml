@@ -7,7 +7,7 @@
 
 image:
   # -- image repository
-  repository: tccr.io/truecharts/apt-cacher-ng
+  repository: sameersbn/apt-cacher-ng
   # -- image tag
   # @default -- chart.appVersion
   tag:
