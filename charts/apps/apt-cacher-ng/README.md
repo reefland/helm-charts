@@ -1,6 +1,6 @@
 # Apt-Cacher NG
 
-![Version: 0.0.1](https://img.shields.io/badge/Version-0.0.1-informational?style=flat-square) ![AppVersion: 3.7.4-20220421](https://img.shields.io/badge/AppVersion-3.7.4-informational?style=flat-square)
+![Version: 0.0.3](https://img.shields.io/badge/Version-0.0.1-informational?style=flat-square) ![AppVersion: 3.7.4-20220421](https://img.shields.io/badge/AppVersion-3.7.4-informational?style=flat-square)
 
 Apt-Cacher NG is a caching proxy, specialized for package files from Linux distributors, primarily for Debian (and Debian based) distributions but not limited to those.
 
@@ -66,23 +66,62 @@ helm install apt-cacher-ng reefland/apt-cacher-ng -f values.yaml
 
 ## Custom Configuration
 
+**IMPORTANT NOTE:**  The service type of LoadBalancer with a specified IP address should be used.  This will allow easy mapping to the pod for external clients who will use the Apt-Cacher NG proxy.
+
+```yaml
+
+service:
+  main:
+    enabled: true
+    primary: true
+    type: LoadBalancer
+    loadBalancerIP: 192.168.0.240
+    ports:
+      http:
+        enabled: true
+        port: 3142
+        protocol: TCP
+        targetPort: 3142
+```
+
+The Apt-Cacher NG comes with a predefined configuration file which is not editable.  This helm chart allows you to define a replacement file (they are not merged, it will be replaced).  You would need to specify a full conf file with any modification you need (if any at all).
+
+```yaml
+configmap:
+  acng-conf-file:
+    enabled: true
+    data:
+      acng.conf: |
+        # Storage directory for downloaded data and related maintenance activity.
+        #
+        # Note: When the value for CacheDir is changed, change the file
+        # /lib/systemd/system/apt-cacher-ng.service too
+        #
+        CacheDir: /var/cache/apt-cacher-ng
+
+        ...
+```
+
 ## Values
 
 **Important**: When deploying an application Helm chart you can add more values from our common library chart [here](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common)
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
+|configmap.acng-conf-file| object | See values.yaml | Configuration file replacement of one provided within container |
 | env | object | See below | environment variables. |
 | env.TZ | string | `"UTC"` | Set the container timezone |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
-| image.repository | string | `"zadam/trilium"` | image repository |
+| image.repository | string | `"sameersbn/apt-cacher-ng"` | image repository |
 | image.tag | string | chart.appVersion | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
-| persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
+| persistence.acng-conf-file | object | See values.yaml | Configure configMap mounting under this key. |
+| persistence.cache-vol | object | See values.yaml | Configure persistence settings for the chart under this key. |
+| service | object | See values.yaml | Configures service settings for the chart. Need to set LoadBalancer IP address here. |
 
 ## Changelog
 
-### Version 0.0.1
+### Version 0.0.3
 
 #### Added
 
@@ -90,7 +129,7 @@ N/A
 
 #### Changed
 
-* Initial Chart Release
+* Updated documentation.
 
 #### Fixed
 

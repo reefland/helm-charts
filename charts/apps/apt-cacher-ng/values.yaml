@@ -24,18 +24,54 @@ env:
 # @default -- See values.yaml
 service:
   main:
+    # type: LoadBalancer
+    # loadBalancerIP: 192.168.0.240
     ports:
       http:
         port: 3142
+        # protocol: TCP
+        # targetPort: 3142
 
 # -- Configure persistence settings for the chart under this key.
 # @default -- See values.yaml
 persistence:
-  config:
+  cache-vol:
     enabled: false
+    # mountPath: /var/cache/apt-cacher-ng
+    # type: pvc
+    # size: 10Gi
+    # retain: true
+    # storageClass: 
+    # volumeName:
+    # existingClaim:
+
+  acng-conf-file:
+    enabled: false
+    # type: configMap
+    # name: apt-cacher-ng-acng-conf-file
+    # mountPath: /etc/apt-cacher-ng/acng.conf
+    # subPath: acng.conf
+    # readOnly: true
 
 ingress:
   # -- Enable and configure ingress settings for the chart under this key.
   # @default -- See values.yaml
   main:
     enabled: false
+
+configmap:
+  acng-conf-file:
+    enabled: false
+#    data:
+#      acng.conf: |
+#        # Storage directory for downloaded data and related maintenance activity.
+#        #
+#        # Note: When the value for CacheDir is changed, change the file
+#        # /lib/systemd/system/apt-cacher-ng.service too
+#        #
+#        CacheDir: /var/cache/apt-cacher-ng
+#        # Log file directory, can be set empty to disable logging
+#        #
+#        LogDir: /var/log/apt-cacher-ng
+#
+# example only - this is not a full config file!
