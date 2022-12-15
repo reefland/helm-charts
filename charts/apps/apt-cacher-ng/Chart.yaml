@@ -3,7 +3,7 @@ apiVersion: v2
 appVersion: 3.7.4-20220421
 description: Apt-Cacher NG is a caching proxy, specialized for package files from Linux distributors.
 name: apt-cacher-ng
-version: 0.0.3
+version: 0.0.4
 kubeVersion: ">=1.16.0-0"
 keywords:
   - apt-cacher-ng

@@ -1,6 +1,6 @@
 # Apt-Cacher NG
 
-![Version: 0.0.3](https://img.shields.io/badge/Version-0.0.1-informational?style=flat-square) ![AppVersion: 3.7.4-20220421](https://img.shields.io/badge/AppVersion-3.7.4-informational?style=flat-square)
+![Version: 0.0.4](https://img.shields.io/badge/Version-0.0.4-informational?style=flat-square) ![AppVersion: 3.7.4-20220421](https://img.shields.io/badge/AppVersion-3.7.4-informational?style=flat-square)
 
 Apt-Cacher NG is a caching proxy, specialized for package files from Linux distributors, primarily for Debian (and Debian based) distributions but not limited to those.
 
@@ -121,7 +121,7 @@ configmap:
 
 ## Changelog
 
-### Version 0.0.3
+### Version 0.0.4
 
 #### Added
 
