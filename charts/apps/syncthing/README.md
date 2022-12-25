@@ -1,10 +1,8 @@
 # syncthing
 
-![Version: 3.5.2](https://img.shields.io/badge/Version-3.5.2-informational?style=flat-square) ![AppVersion: 1.22.2](https://img.shields.io/badge/AppVersion-1.22.2-informational?style=flat-square)
+![Version: 3.5.3](https://img.shields.io/badge/Version-3.5.3-informational?style=flat-square) ![AppVersion: 1.22.2](https://img.shields.io/badge/AppVersion-1.22.2-informational?style=flat-square)
 
 Open Source Continuous File Synchronization
-
-**This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/k8s-at-home/charts/issues/new/choose)**
 
 ## Source Code
 
@@ -24,9 +22,9 @@ Kubernetes: `>=1.16.0-0`
 ## TL;DR
 
 ```console
-helm repo add k8s-at-home https://k8s-at-home.com/charts/
+helm repo add reefland https://reefland.github.io/helm-charts
 helm repo update
-helm install syncthing k8s-at-home/syncthing
+helm install syncthing reefland/syncthing
 ```
 
 ## Installing the Chart
@@ -34,7 +32,7 @@ helm install syncthing k8s-at-home/syncthing
 To install the chart with the release name `syncthing`
 
 ```console
-helm install syncthing k8s-at-home/syncthing
+helm install syncthing reefland/syncthing
 ```
 
 ## Uninstalling the Chart
@@ -50,25 +48,48 @@ The command removes all the Kubernetes components associated with the chart **in
 ## Configuration
 
 Read through the [values.yaml](./values.yaml) file. It has several commented out suggested values.
-Other values may be used from the [values.yaml](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common/values.yaml) from the [common library](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common).
+Other values may be used from the [values.yaml](github.com/reefland/helm-charts/blob/main/charts/library/common/values.yaml) from the [common library](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common).
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 ```console
 helm install syncthing \
   --set env.TZ="America/New York" \
-    k8s-at-home/syncthing
+    reefland/syncthing
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install syncthing k8s-at-home/syncthing -f values.yaml
+helm install syncthing reefland/syncthing -f values.yaml
 ```
 
 ## Custom configuration
 
-N/A
+**IMPORTANT NOTE:**  The service type of LoadBalancer with a specified IP address should be used.  This will allow easy mapping to the pod for external Syncthing clients.
+
+```yaml
+listen:
+  enabled: true
+  type: LoadBalancer
+  # loadBalancerIP: 192.168.10.221
+  externalTrafficPolicy: Local
+  ports:
+    listen:
+      enabled: true
+      port: 22000
+      protocol: TCP
+      targetPort: 22000
+    discovery:
+      enabled: true
+      port: 21027
+      protocol: UDP
+      targetPort: 21027
+discovery:
+    enabled: false
+```
+
+* Modern kubernetes LoadBalancers support multi-protocol two different LoadBalancers are not needed.  Above shows both TCP and UDP on a single LoadBalancer with the Chart's default second one disabled. If you need two then set the type and IP, move the values and enable the 2nd one.
 
 ## Values
 
@@ -80,12 +101,13 @@ N/A
 | image.repository | string | `"syncthing/syncthing"` | image repository |
 | image.tag | string | `"1.22.2"` | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
-| persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
-| service | object | See values.yaml | Configures service settings for the chart. |
+| persistence.data | object | See values.yaml | Configure persistence settings for the chart under this key. |
+| service.listen | object | See values.yaml | Configures LoadBalancer service settings for the chart. |
+| service.main | object | See values.yaml | Configures Ingress service settings for the chart. |
 
 ## Changelog
 
-### Version 3.5.2
+### Version 3.5.3
 
 #### Added
 
@@ -93,7 +115,7 @@ N/A
 
 #### Changed
 
-* Upgraded `common` chart dependency to version 4.5.2
+* Updated README.md documentation.
 
 #### Fixed
 
