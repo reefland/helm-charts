@@ -236,6 +236,36 @@ entries:
           description: Upgraded `common` chart dependency to version 4.5.2
     apiVersion: v2
     appVersion: 1.22.2
+    created: "2022-12-25T16:24:14.106331463Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Open Source Continuous File Synchronization
+    digest: 50f1f4859125d8406ec6dde1358e231dab0f120528a6a7c3b52ebdada7aeb1a7
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/syncthing
+    icon: https://github.com/syncthing/syncthing/raw/main/assets/logo-128.png
+    keywords:
+    - syncthing
+    - file sync
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: dennis.zhang.nrg@gmail.com
+      name: FlipEnergy
+    - name: claughinghouse
+    name: syncthing
+    sources:
+    - https://syncthing.net/
+    - https://github.com/syncthing/syncthing
+    urls:
+    - https://github.com/reefland/helm-charts/releases/download/syncthing-3.5.3/syncthing-3.5.3.tgz
+    version: 3.5.3
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 1.22.2
     created: "2022-12-24T22:33:12.05080628Z"
     dependencies:
     - name: common
@@ -389,4 +419,4 @@ entries:
     urls:
     - https://github.com/reefland/helm-charts/releases/download/zigbee2mqtt-9.4.2/zigbee2mqtt-9.4.2.tgz
     version: 9.4.2
-generated: "2022-12-24T22:33:12.050831581Z"
+generated: "2022-12-25T16:24:14.106651689Z"
