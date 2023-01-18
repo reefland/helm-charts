@@ -3,12 +3,11 @@ apiVersion: v2
 appVersion: 3.7.4-20220421
 description: Apt-Cacher NG is a caching proxy, specialized for package files from Linux distributors.
 name: apt-cacher-ng
-version: 0.0.4
+version: 0.0.5
 kubeVersion: ">=1.16.0-0"
 keywords:
   - apt-cacher-ng
 home: https://github.com/reefland/helm-charts/tree/main/charts/apt-cacher-ng
-icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
 sources:
   - https://www.unix-ag.uni-kl.de/~bloch/acng/
   - https://github.com/sameersbn/docker-apt-cacher-ng
