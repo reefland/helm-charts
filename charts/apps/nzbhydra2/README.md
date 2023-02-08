@@ -1,6 +1,6 @@
 # NZBHydra 2
 
-![Version: 0.0.2](https://img.shields.io/badge/Version-0.0.2-informational?style=flat-square) ![AppVersion: 5.1.1](https://img.shields.io/badge/AppVersion-5.1.1-informational?style=flat-square)
+![Version: 0.0.3](https://img.shields.io/badge/Version-0.0.3-informational?style=flat-square) ![AppVersion: 5.1.1](https://img.shields.io/badge/AppVersion-5.1.1-informational?style=flat-square)
 
 NZBHydra 2 is a meta search for newznab indexers and torznab trackers.
 
@@ -132,7 +132,7 @@ Two PVC storage entries are needed:
 | env.PUID | integer | 1001 | Default process User ID |
 | env.PGID | integer | 1001 | Default process Group ID |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
-| image.repository | string | `"linuxserver/hydra2"` | image repository |
+| image.repository | string | `"lscr.io/linuxserver/nzbhydra2"` | image repository |
 | image.tag | string | chart.appVersion | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | persistence.config | object | See values.yaml | Configure persistence settings for configuration under this key. |
@@ -141,7 +141,7 @@ Two PVC storage entries are needed:
 
 ## Changelog
 
-### Version 0.0.2
+### Version 0.0.3
 
 #### Added
 
