@@ -41,7 +41,7 @@ probes:
     failureThreshold: 5
     periodSeconds: 10
   startup:
-    initialDelaySeconds: 5
+    initialDelaySeconds: 45
     failureThreshold: 30
     periodSeconds: 10
 

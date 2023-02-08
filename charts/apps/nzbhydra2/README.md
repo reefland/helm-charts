@@ -1,6 +1,6 @@
 # NZBHydra 2
 
-![Version: 0.0.3](https://img.shields.io/badge/Version-0.0.3-informational?style=flat-square) ![AppVersion: 5.1.1](https://img.shields.io/badge/AppVersion-5.1.1-informational?style=flat-square)
+![Version: 0.0.4](https://img.shields.io/badge/Version-0.0.4-informational?style=flat-square) ![AppVersion: 5.1.1](https://img.shields.io/badge/AppVersion-5.1.1-informational?style=flat-square)
 
 NZBHydra 2 is a meta search for newznab indexers and torznab trackers.
 
@@ -88,13 +88,21 @@ ingress:
   # @default -- See values.yaml
   main:
     enabled: false
+    annotations:
+      traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+      traefik.ingress.kubernetes.io/router.middlewares: "traefik-x-forward-https-headers@kubernetescrd,traefik-compress@kubernetescrd"
+    hosts:
+      - host: hydra.example.com
+        paths:
+          - path: /
+            pathType: Prefix
 ```
 
 ### PVC Storage
 
 Two PVC storage entries are needed:
 
-* One to hold the NZBHydra 2 configuration, log files, database.  This can be a storage class which only does `ReadWriteOnce` (ceph-block shown in example, adjust to your environment).
+* One named `config` to hold the NZBHydra 2 configuration, log files, database.  This can be a storage class which only does `ReadWriteOnce` (ceph-block shown in example, adjust to your environment).
 
 ```yaml
     persistence:
@@ -108,7 +116,7 @@ Two PVC storage entries are needed:
         storageClass: ceph-block
 ```
 
-* Second PVC storage volume is a shared space among other NZB aware applications this is a working area for downloading, queues, watch directory, etc.  This MUST be a storage class which supports `ReadWriteMany` (ceph-filesystem shown in example, adjust to your environment).
+* Second named `data` which is PVC storage for shared space among other NZB aware applications this is a working area for downloading, queues, watch directory, etc.  This MUST be a storage class which supports `ReadWriteMany` (ceph-filesystem shown in example, adjust to your environment).
 
 ```yaml
       data:
@@ -141,15 +149,15 @@ Two PVC storage entries are needed:
 
 ## Changelog
 
-### Version 0.0.3
+### Version 0.0.4
 
 #### Added
 
-N/A
+* Ingress example to docs.
 
 #### Changed
 
-* Initial release
+* Increased initialDelaySeconds, startup probe delay.
 
 #### Fixed
 
