@@ -58,3 +58,7 @@ persistence:
   config:
     enabled: false
     mountPath: /config
+
+  data:
+    enabled: false
+    mountPath: /data/downloads
