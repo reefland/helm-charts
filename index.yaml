@@ -261,6 +261,34 @@ entries:
           description: Upgraded `common` chart dependency to version 4.5.2
     apiVersion: v2
     appVersion: 5.1.1
+    created: "2023-02-08T03:27:41.249596491Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: A meta search for newznab indexers and torznab trackers.
+    digest: 9bdf69b1d5f243f5c74a4228cde419a4837b24e13fcf8ea88f2539db1c4b2b63
+    home: https://github.com/theotherp/nzbhydra2
+    icon: https://github.com/theotherp/nzbhydra2/blob/master/misc/images/favicons/favicon196.png
+    keywords:
+    - nzbhydra2
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: reefland@gmail.com
+      name: reefland
+    name: nzbhydra2
+    sources:
+    - https://github.com/theotherp/nzbhydra2
+    urls:
+    - https://github.com/reefland/helm-charts/releases/download/nzbhydra2-0.0.3/nzbhydra2-0.0.3.tgz
+    version: 0.0.3
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 5.1.1
     created: "2023-02-08T03:09:25.31285772Z"
     dependencies:
     - name: common
@@ -501,4 +529,4 @@ entries:
     urls:
     - https://github.com/reefland/helm-charts/releases/download/zigbee2mqtt-9.4.2/zigbee2mqtt-9.4.2.tgz
     version: 9.4.2
-generated: "2023-02-08T03:09:25.31288292Z"
+generated: "2023-02-08T03:27:41.249655491Z"
