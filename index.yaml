@@ -254,6 +254,35 @@ entries:
     urls:
     - https://github.com/reefland/helm-charts/releases/download/mosquitto-4.8.2/mosquitto-4.8.2.tgz
     version: 4.8.2
+  nzbhydra2:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 5.1.1
+    created: "2023-02-08T01:29:16.141539872Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: A meta search for newznab indexers and torznab trackers.
+    digest: 243d2e1f13fe268b4f264daaabba233920db94a8f7234bafc35193efbc95fe6a
+    home: https://github.com/theotherp/nzbhydra2
+    icon: https://github.com/theotherp/nzbhydra2/blob/master/misc/images/favicons/favicon196.png
+    keywords:
+    - nzbhydra2
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: reefland@gmail.com
+      name: reefland
+    name: nzbhydra2
+    sources:
+    - https://github.com/theotherp/nzbhydra2
+    urls:
+    - https://github.com/reefland/helm-charts/releases/download/nzbhydra2-0.0.1/nzbhydra2-0.0.1.tgz
+    version: 0.0.1
   syncthing:
   - annotations:
       artifacthub.io/changes: |-
@@ -444,4 +473,4 @@ entries:
     urls:
     - https://github.com/reefland/helm-charts/releases/download/zigbee2mqtt-9.4.2/zigbee2mqtt-9.4.2.tgz
     version: 9.4.2
-generated: "2023-01-18T18:18:15.017875349Z"
+generated: "2023-02-08T01:29:16.141567672Z"
