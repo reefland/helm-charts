@@ -1,0 +1,12 @@
+---
+area/github:
+  - ".github/**/*"
+  - ".gitignore"
+area/README-update:
+  - "**/README.md"
+area/documentation:
+  - "docs/**/*"
+area/charts:
+  - "charts/**/*"
+area/examples:
+  - "examples/**/*"
