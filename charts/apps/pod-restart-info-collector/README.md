@@ -1,6 +1,6 @@
 # Pod Restart Info Collector
 
-![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat-square) ![AppVersion: 1.00.0](https://img.shields.io/badge/AppVersion-1.0.0-informational?style=flat-square)
+![Version: 0.1.2](https://img.shields.io/badge/Version-0.1.2-informational?style=flat-square) ![AppVersion: 1.16.0](https://img.shields.io/badge/AppVersion-1.16.0-informational?style=flat-square)
 
 k8s-pod-restart-info-collector is a simple K8s customer controller that watches for Pods changes and collects K8s Pod restart reasons, logs, and events to Slack channel when a Pod restarts.
 
@@ -70,17 +70,24 @@ Example Slack Notification Image from GitHub Project Page:
 
 ## Values
 
-| Key | Type | Default | Description |
-|-----|------|---------|-------------|
-| clusterName | string | `none` | K8s cluster name (Display on slack message). `Required`|
-| slackWebhookUrl | string | `none` | Slack webhook URL. `Required`|
-| slackUsername | string | `k8s-pod-restart-info-collector` | Slack username (Display on slack message) |
-| slackChannel | string | `restart-info-nonprod` | Slack channel name |
-| muteSeconds | string | `600` | The time to mute duplicate pod alerts |
-
+| Name                                | Description                                        | Value         |
+| ------------------------------------| -------------------------------------------------- | ------------- |
+| `clusterName`                       | K8s cluster name (Display on slack message)                        | required         |
+| `slackUsername`                     | Slack username (Display on slack message) | default: `"k8s-pod-restart-info-collector"`          |
+| `slackChannel`                      | Slack channel name | default: `"restart-info-nonprod"`          |
+| `muteSeconds`                       | The time to mute duplicate pod alerts | default: `"600"`    
+| `ignoreRestartCount`                | The number of pod restart count to ignore | default: `"30"`
+| `ignoredNamespaces`                 | A comma-separated list of namespaces to ignore | default: `""`    
+| `ignoredPodNamePrefixes`            | A comma-separated list of pod name prefixes to ignore | default: `""`   
+| `watchedNamespaces`                 | A comma-separated list of namespaces to watch, default is all ("")| default: `""`    
+| `watchedPodNamePrefixes`            | A comma-separated list of pod name prefixes to watch, default is all ("")| default: `""`   
+| `ignoreRestartsWithExitCodeZero`    | Whether restart events with an exit code of 0 should be ignored | default: `false`
+| `slackWebhookUrl`                   | Slack webhook URL | required if slackWebhooUrlSecretKeyRef is not present                       |
+| `slackWebhookurlSecretKeyRef.key`   | Slack webhook URL SecretKeyRef.key                 | key within the secret which has webhook value |
+| `slackWebhookurlSecretKeyRef.name`  | Slack webhook URL SecretKeyRef.name                | name of secret holding the Slack WebHook URL  |
 ## Changelog
 
-### Version 0.1.1
+### Version 0.1.2
 
 #### Added
 
@@ -88,7 +95,7 @@ N/A
 
 #### Changed
 
-N/A
+* Updated per upstream project.
 
 #### Fixed
 
