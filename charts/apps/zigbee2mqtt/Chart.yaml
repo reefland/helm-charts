@@ -3,7 +3,7 @@ apiVersion: v2
 appVersion: 1.19.1
 description: Bridges events and allows you to control your Zigbee devices via MQTT
 name: zigbee2mqtt
-version: 9.4.3
+version: 9.4.4
 kubeVersion: ">=1.16.0-0"
 keywords:
   - zigbee
@@ -16,8 +16,6 @@ sources:
 maintainers:
   - name: masantiago
     email: miguelangel.santiago@hotmail.com
-  - name: bjw-s
-    email: me@bjw-s.dev
 dependencies:
   - name: common
     repository: https://library-charts.k8s-at-home.com
