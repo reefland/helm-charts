@@ -1,12 +1,12 @@
 # ⚠️ Deprecated Notice
 
-This `k8s@home` forked chart has been replaced by an updated chart based on `app-template`.  Please my [other repository](https://github.com/reefland/extra_k8s_apps/tree/master/zigbee2mqtt-argocd-helm) for reference instructions.
+This `k8s@home` forked chart has been replaced by an updated chart based on `app-template`.  Please see my [other repository](https://github.com/reefland/extra_k8s_apps/tree/master/apps/zigbee2mqtt-argocd-helm) for reference instructions.
 
 ---
 
 ## zigbee2mqtt
 
-![Version: 9.4.4](https://img.shields.io/badge/Version-9.4.4-informational?style=flat-square) ![AppVersion: 1.27.0](https://img.shields.io/badge/AppVersion-1.27.0-informational?style=flat-square)
+![Version: 9.4.5](https://img.shields.io/badge/Version-9.4.5-informational?style=flat-square) ![AppVersion: 1.32.2](https://img.shields.io/badge/AppVersion-1.32.2-informational?style=flat-square)
 
 Bridges events and allows you to control your Zigbee devices via MQTT
 
@@ -22,7 +22,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://library-charts.k8s-at-home.com | common | 4.5.2 |
+| <https://library-charts.k8s-at-home.com> | common | 4.5.2 |
 
 ## TL;DR
 
@@ -134,7 +134,7 @@ securityContext:
 
 ## Changelog
 
-### Version 9.4.4
+### Version 9.4.5
 
 #### Added
 
@@ -146,4 +146,5 @@ N/A
 
 #### Fixed
 
-N/A
+* Fix broken links
+* Bump application version
