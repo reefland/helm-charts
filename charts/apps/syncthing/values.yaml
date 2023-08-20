@@ -4,12 +4,14 @@
 # This chart inherits from our common library chart. You can check the default values/options here:
 # https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common/values.yaml
 #
+---
+# yaml-language-server: $schema=https://json.schemastore.org/helmfile
 
 image:
   # -- image repository
   repository: syncthing/syncthing
   # -- image tag
-  tag: 1.22.2
+  tag: 1.23.7
   # -- image pull policy
   pullPolicy: IfNotPresent
 

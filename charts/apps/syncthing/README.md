@@ -1,6 +1,6 @@
 # syncthing
 
-![Version: 3.5.3](https://img.shields.io/badge/Version-3.5.3-informational?style=flat-square) ![AppVersion: 1.22.2](https://img.shields.io/badge/AppVersion-1.22.2-informational?style=flat-square)
+![Version: 3.5.4](https://img.shields.io/badge/Version-3.5.4-informational?style=flat-square) ![AppVersion: 1.23.7](https://img.shields.io/badge/AppVersion-1.23.7-informational?style=flat-square)
 
 Open Source Continuous File Synchronization
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://library-charts.k8s-at-home.com | common | 4.5.2 |
+| <https://library-charts.k8s-at-home.com> | common | 4.5.2 |
 
 ## TL;DR
 
@@ -48,7 +48,7 @@ The command removes all the Kubernetes components associated with the chart **in
 ## Configuration
 
 Read through the [values.yaml](./values.yaml) file. It has several commented out suggested values.
-Other values may be used from the [values.yaml](github.com/reefland/helm-charts/blob/main/charts/library/common/values.yaml) from the [common library](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common).
+Other values may be used from the [values.yaml](https://github.com/reefland/helm-charts/blob/main/charts/library/common/values.yaml) from the [common library](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common).
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
@@ -107,7 +107,7 @@ discovery:
 
 ## Changelog
 
-### Version 3.5.3
+### Version 3.5.4
 
 #### Added
 
@@ -119,8 +119,5 @@ N/A
 
 #### Fixed
 
-N/A
-
-### Older versions
-
-A historical overview of changes can be found on [ArtifactHUB](https://artifacthub.io/packages/helm/k8s-at-home/syncthing?modal=changelog)
+* Fixed broken links
+* Bump application version
