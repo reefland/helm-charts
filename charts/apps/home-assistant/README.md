@@ -17,10 +17,10 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.bitnami.com/bitnami | influxdb | 5.3.5 |
-| https://charts.bitnami.com/bitnami | mariadb | 11.0.14 |
-| https://charts.bitnami.com/bitnami | postgresql | 11.6.12 |
-| https://library-charts.k8s-at-home.com | common | 4.5.2 |
+| <https://bitnami.com/stack/influxdb> | influxdb | 5.3.5 |
+| <https://bitnami.com/stack/mariadb> | mariadb | 11.0.14 |
+| <https://bitnami.com/stack/postgresql> | postgresql | 11.6.12 |
+| <https://library-charts.k8s-at-home.com> | common | 4.5.2 |
 
 ## TL;DR
 
