@@ -1,10 +1,14 @@
-# mosquitto
+# ⚠️ Deprecated Notice
 
-![Version: 4.8.3](https://img.shields.io/badge/Version-4.8.3-informational?style=flat-square) ![AppVersion: 2.0.14](https://img.shields.io/badge/AppVersion-2.0.14-informational?style=flat-square)
+This `k8s@home` forked chart has been replaced by an updated chart based on `app-template`.  Please see my [other repository](https://github.com/reefland/extra_k8s_apps/tree/master/apps/mosquitto-argocd-helm) for reference instructions.
+
+---
+
+## mosquitto
+
+![Version: 4.8.4](https://img.shields.io/badge/Version-4.8.4-informational?style=flat-square) ![AppVersion: 2.0.15](https://img.shields.io/badge/AppVersion-2.0.15-informational?style=flat-square)
 
 Eclipse Mosquitto - An open source MQTT broker
-
-**This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/k8s-at-home/charts/issues/new/choose)**
 
 ## Source Code
 
@@ -18,7 +22,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://library-charts.k8s-at-home.com | common | 4.5.2 |
+| <https://library-charts.k8s-at-home.com> | common | 4.5.2 |
 
 ## TL;DR
 
@@ -87,7 +91,7 @@ N/A
 
 ## Changelog
 
-### Version 4.8.3
+### Version 4.8.4
 
 #### Added
 
@@ -95,12 +99,9 @@ N/A
 
 #### Changed
 
-* Upgraded `common` chart dependency to version 4.5.2
+N/A
 
 #### Fixed
 
-N/A
-
-### Older versions
-
-A historical overview of changes can be found on [ArtifactHUB](https://artifacthub.io/packages/helm/k8s-at-home/mosquitto?modal=changelog)
+* Removed outdated repository links
+* Added deprecated notice, [this chart has been replaced](https://github.com/reefland/extra_k8s_apps/tree/master/apps/mosquitto-argocd-helm).

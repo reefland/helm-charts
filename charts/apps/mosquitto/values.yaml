@@ -4,6 +4,8 @@
 # This chart inherits from the common library chart. You can check the default values/options here:
 # https://github.com/reefland/helm-charts/blob/main/charts/library/common/values.yaml
 #
+---
+# yaml-language-server: $schema=https://json.schemastore.org/helmfile
 
 image:
   # -- image repository
